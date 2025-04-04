@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 # Create your views here.
+def homePage(request):
+    return render(request, 'base/home.html')
+
 def explorePage(request):
-    return HttpResponse('Explore Page')
+    return render(request, 'explore.html')
 
 def communityPage(request):
-    return HttpResponse('Community Page')
+    return render(request, 'community.html')
 
