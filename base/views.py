@@ -1,11 +1,11 @@
 from django.shortcuts import render
-# Create your views here.
-def homePage(request):
-    return render(request, 'base/home.html')
 
-def explorePage(request):
+# Create your views here.
+def home(request):
+    return render(request, 'home.html')
+
+def explore(request):
     return render(request, 'explore.html')
 
-def communityPage(request):
+def community(request):
     return render(request, 'community.html')
-

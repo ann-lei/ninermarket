@@ -1,6 +1,38 @@
 {% load static %}
 
-<a href="base/home.html">
-    <img src="{% static 'images/uncc-logo.png'%}">
-    <h1>Ninermarket</h1>
-</a>
+<div class = "navbar">
+    <div class = "nav-left">
+        <a href="{% url 'home' %}" class = "logo">
+            NINER MARKET
+        </a>
+
+        <!-- mobile hamburger icon -->
+        <button class="hamburger" onclick="toggleNav()">☰</button>
+    </div>
+        
+    <div class="nav-icons" id="navMenu">
+    <!-- Nav bar links -->
+        <a href="{% url 'explore' %}">
+            <img src="{% static 'images/icons/home.png' %}" alt="explore">Explore
+        </a>
+
+        <a href="{% url 'community' %}">
+            <img src="{% static 'images/icons/community.png' %}">Community
+        </a>
+
+        <a href="#">
+            <img src="{% static 'images/icons/message.png' %}">Message
+        </a>
+
+        <a href="#">
+            <img src="{% static 'images/icons/Sales.png' %}">Create Listings
+        </a>
+
+        <form action="#" method="get">
+            <button type="submit" class="login-button">
+                Login/Signup
+            </button>
+        </form>
+
+    </div>
+</div>
